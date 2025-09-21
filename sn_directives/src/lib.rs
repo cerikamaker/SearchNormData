@@ -1,5 +1,12 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
+mod directive;
+pub mod api;
+
+use crate::directive::BasicDirective;
+
+pub fn get_directive() -> BasicDirective{
+    let name: String = String::from("MRL");
+    let desc: String = String::from("Maschinenrichtlinie");
+    BasicDirective::new(name, desc)   
 }
 
 #[cfg(test)]
@@ -8,7 +15,8 @@ mod tests {
 
     #[test]
     fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+        let result = get_directive();
+        assert_eq!(result.name, "MRL");
+        println!("Beschreibung: {}", result.description);
     }
 }
