@@ -15,8 +15,10 @@ mod tests {
 
     #[test]
     fn it_works() {
-        let result = get_directive();
+        let mut result = get_directive();
         assert_eq!(result.name, "MRL");
+        result.change_name(String::from("NRL"));
+        assert_eq!(result.name, "NRL");
         println!("Beschreibung: {}", result.description);
     }
 }
