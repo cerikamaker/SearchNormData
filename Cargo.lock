@@ -5,3 +5,7 @@ version = 4
 [[package]]
 name = "sn_directives"
 version = "0.1.0"
+
+[[package]]
+name = "sn_products"
+version = "0.1.0"
