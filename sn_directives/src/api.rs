@@ -1,7 +1,7 @@
-use crate::directive::BasicDirective;
+use super::directives::*;
 
-pub fn get_directive() -> BasicDirective{
-    let name:String = String::from("MRL");
-    let desc:String = String::from("Maschinenrichtlinie");
-    BasicDirective::new(name, desc)
+pub fn get_directive() -> Directive{
+    let name: String = String::from("NRL");
+    let desc: String = String::from("Maschinenrichtlinie");
+    Directive::Base(BaseDirective::new(name, desc))   
 }
