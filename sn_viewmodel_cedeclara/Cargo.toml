@@ -17,3 +17,6 @@ serde-wasm-bindgen = {version = "0.6.5"}
 
 [lib]
 crate-type = ["cdylib", "rlib"]
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3"
